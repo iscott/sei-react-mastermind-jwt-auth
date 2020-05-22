@@ -225,6 +225,7 @@ class App extends Component {
                 handlePegClick={this.handlePegClick}
                 handleScoreClick={this.handleScoreClick}
                 handleTimerUpdate={this.handleTimerUpdate}
+                user={this.state.user}
               />
             )}
           />
