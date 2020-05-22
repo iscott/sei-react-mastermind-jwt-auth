@@ -206,6 +206,10 @@ class App extends Component {
     this.setState({ user: null });
   };
 
+  handleSignup = () => {
+    this.setState({ user: userService.getUser() });
+  };
+
   render() {
     let winTries = this.getWinTries();
     return (
@@ -250,7 +254,9 @@ class App extends Component {
           <Route
             exact
             path="/signup"
-            render={({ history }) => <SignupPage history={history} />}
+            render={({ history }) => (
+              <SignupPage history={history} handleSignup={this.handleSignup} />
+            )}
           />
           <Route exact path="/login" render={() => <LoginPage />} />
           <Route
