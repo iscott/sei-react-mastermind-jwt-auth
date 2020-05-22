@@ -9,7 +9,7 @@ const NavBar = (props) => {
         HIGH SCORES
       </Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <Link to="" className="NavBar-link">
+      <Link to="" className="NavBar-link" onClick={props.handleLogout}>
         LOG OUT
       </Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

@@ -201,6 +201,11 @@ class App extends Component {
     this.setState({ scores });
   }
 
+  handleLogout = () => {
+    userService.logout();
+    this.setState({ user: null });
+  };
+
   render() {
     let winTries = this.getWinTries();
     return (
@@ -226,6 +231,7 @@ class App extends Component {
                 handleScoreClick={this.handleScoreClick}
                 handleTimerUpdate={this.handleTimerUpdate}
                 user={this.state.user}
+                handleLogout={this.handleLogout}
               />
             )}
           />
