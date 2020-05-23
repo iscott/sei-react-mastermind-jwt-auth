@@ -29,12 +29,14 @@ const GamePage = (props) => {
             handleTimerUpdate={props.handleTimerUpdate}
             isTiming={props.isTiming}
           />
-          <Link
-            className="btn btn-default GamePage-link-margin"
-            to="/high-scores"
-          >
-            High Scores
-          </Link>
+          {props.user && (
+            <Link
+              className="btn btn-default GamePage-link-margin"
+              to="/high-scores"
+            >
+              High Scores
+            </Link>
+          )}
           <Link className="btn btn-default GamePage-link-margin" to="/settings">
             Difficulty
           </Link>
